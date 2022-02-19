@@ -12,7 +12,8 @@ export type SignInCredentials = {
 }
 
 export interface AuthContextData {
-  signIn(credentials: SignInCredentials): Promise<void>
+  signIn: (credentials: SignInCredentials) => Promise<void>
+  signOut: () => void
   user: User | undefined
   isAuthenticated: boolean
 }
